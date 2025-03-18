@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>João Ribas | Portfólio</title>
+</head>
+
+<body>
+
+    <!-- Div para a animação das partículas -->
+    <div class="particulas"></div>
+
+    <!-- Barra de navegação -->
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#contatos" class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção de cabeçalho -->
+    <main id="inicio" class="cabecalho">
+        <!-- Foto de perfil -->
+        <img src="img/joao.png" alt="Foto de João Ribas" class="foto-perfil">
+        <h1>João Ribas</h1>
+        <p class="cabecalho-subtitulo">Estudante de Programação</p>
+    </main>
+
+    <!-- Seção sobre -->
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-conteudo">
+            <p class="sobre-paragrafo">Olá, meu nome é João Ribas, sou estudante de programação e estou em busca de
+                novos desafios e oportunidades. Atualmente estou estudando desenvolvimento web e mobile, e estou
+                sempre em busca de novos conhecimentos e experiências.</p>
+        </div>
+    </section>
+
+    <!-- Seção de projetos -->
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-conteudo">
+            <!-- Card do projeto 1 -->
+            <div class="projeto-card">
+                <img src="img/projeto1.png" alt="Projeto 1" class="projeto-img">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Pokedéx</h3>
+                    <p class="paragrafo-projetos">Simulação de um Pokedéx</p>
+                </div>
+            </div>
+
+            <!-- Card do projeto 2 -->
+            <div class="projeto-card">
+                <img src="img/projeto2.png" alt="Projeto 2" class="projeto-img">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Landing Page</h3>
+                    <p class="paragrafo-projetos">Simulação e apresentação de uma Landing Page</p>
+                </div>
+            </div>
+
+            <!-- Card do projeto 3 -->
+            <div class="projeto-card">
+                <img src="img/projeto3.png" alt="Projeto 3" class="projeto-img">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Teste</h3>
+                    <p class="paragrafo-projetos">Simulação de um teste</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de contato -->
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <!-- Formulário de contato -->
+        <form class="form-contato" id="formulario" onsubmit="enviarWhats(event)">
+
+            <!-- Campo para o nome -->
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" type="text" required id="nome">
+            </div>
+
+            <!-- Campo para a mensagem -->
+            <div class="grupo-form">
+                <textarea placeholder="Digite sua mensagem" class="campo-form" required rows="6"
+                    id="mensagem"></textarea>
+            </div>
+
+            <!-- Botão para enviar via WhatsApp -->
+            <button type="submit" class="btn-form">Enviar WhatsApp</button>
+
+        </form>
+    </section>
+
+    <!-- Script para enviar mensagem via WhatsApp -->
+    <script>
+        function enviarWhats(event) {
+            // Evita o envio tradicional do formulário
+            event.preventDefault();
+
+            // Obtém os valores dos campos do formulário
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5541995570979'; // Número de telefone configurado
+
+            // Cria o texto da mensagem formatado
+            const texto = `Olá, meu nome é ${nome}, ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            // Cria a URL do WhatsApp com a mensagem formatada
+            const url = `https://wa.me/${telefone}/?t=${msgFormatada}`;
+
+            // Abre o link em uma nova aba
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+
+</html>
