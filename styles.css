@@ -288,3 +288,17 @@ h1 {
     background: radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
     radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%), var(--maisEscuro);
 }
+
+.footer {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    text-align: center; /* Alinha o texto no centro */
+    padding: 1rem;
+    background: var(--escura);
+    color: var(--claro);
+    font-size: 1.2rem;
+    gap: 1rem;
+    
+}
+
