@@ -89,6 +89,7 @@ body {
     border-radius: 50%;
     border: solid var(--vidro);
     animation: flutuar 5s ease-in-out infinite; /* Animação de flutuação */
+    cursor: pointer;
 }
 
 /* Animação de flutuação para a imagem */
