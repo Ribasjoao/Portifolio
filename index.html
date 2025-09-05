@@ -103,40 +103,43 @@
 
     <footer class="footer">&copy;Feito para testes por<strong>João Ribas</strong>☕</footer>
 
+
     <!-- Script para enviar mensagem via WhatsApp -->
     <script>
-        function enviarWhats(event) {
+
+        //function enviarWhats(event) {
             // Evita o envio tradicional do formulário
-            event.preventDefault();
+            //event.preventDefault();
 
-            // Obtém os valores dos campos do formulário
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem').value;
-            const telefone = '5541995570979'; // Número de telefone configurado
+                // Obtém os valores dos campos do formulário
+                //const nome = document.getElementById('nome').value;
+                //const mensagem = document.getElementById('mensagem').value;
+                //const telefone = '5541995570979'; // Número de telefone configurado
 
-            // Cria o texto da mensagem formatado
-            const texto = `Olá, meu nome é ${nome}, ${mensagem}`;
-            const msgFormatada = encodeURIComponent(texto);
+                // Cria o texto da mensagem formatado
+                //const texto = `Olá, meu nome é ${nome}, ${mensagem}`;
+                //const msgFormatada = encodeURIComponent(texto);
 
-            // Cria a URL do WhatsApp com a mensagem formatada
-            const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`;
+                // Cria a URL do WhatsApp com a mensagem formatada
+                //const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`;
 
-            // Abre o link em uma nova aba
-            window.open(url, '_blank');
-        }
-        
-        document.addEventListener("DOMContentLoaded", function () {
-        const form = document.querySelector(".form-contato");
+                // Abre o link em uma nova aba
+                //window.open(url, '_blank');
+            }
 
-        form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Evita o recarregamento da página
-            //alert("Mensagem enviada com sucesso!"); // Alerta opcional
-            form.reset(); // Limpa os campos do formulário
+            //document.addEventListener("DOMContentLoaded", function () {
+            //const form = document.querySelector(".form-contato");
+
+            //orm.addEventListener("submit", function (event) {
+                //event.preventDefault(); // Evita o recarregamento da página
+                //alert("Mensagem enviada com sucesso!"); // Alerta opcional
+                //form.reset(); // Limpa os campos do formulário
+            });
         });
-    });
 
-    
-    </script>
+
+        </script>
+
 </body>
 
 </html>
